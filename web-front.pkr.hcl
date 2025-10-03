@@ -9,7 +9,7 @@ packer {
 }
 
 # https://developer.hashicorp.com/packer/docs/templates/hcl_templates/blocks/source
-source "amazon-ebs" "ubuntu" {
+source "amazon-ebs" "debian" {
   ami_name      = "web-nginx-aws"
   instance_type = "t2.micro"
   region        = "us-west-2"
@@ -30,7 +30,6 @@ build {
   name = "web-nginx"
   sources = [
     # COMPLETE ME Use the source defined above
-    ""
   ]
   
   # https://developer.hashicorp.com/packer/docs/templates/hcl_templates/blocks/build/provisioner
@@ -38,6 +37,8 @@ build {
     inline = [
       "echo creating directories",
       # COMPLETE ME add inline scripts to create necessary directories and change directory ownership.
+      # See nginx.conf file for root directory where files will be served.
+      # Files need appropriate ownership for default user
     ]
   }
 
