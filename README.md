@@ -17,6 +17,7 @@ Building the AMI
 1. Clone the repository:
 
 git clone repo url
+
 cd wk5-packer-intro-lab-start
 
 2. Validate the Packer template:
