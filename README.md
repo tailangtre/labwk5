@@ -16,7 +16,7 @@ Building the AMI
 
 1. Clone the repository:
 
-git clone <repo url>
+git clone repo url
 cd wk5-packer-intro-lab-start
 
 2. Validate the Packer template:
@@ -41,13 +41,13 @@ Testing the Web Page
 
 Open a browser and visit:
 
-http://<public-ip>
+http://public-ip
 
 You should see the index.html page served by Nginx.
 
 Screenshot
 
-[Web page served by Nginx] (screenshot.png)
+![Web page served by Nginx](screenshot.png)
 
 
 This confirms that the AMI successfully installs Nginx, sets proper permissions, and serves the included HTML page.
